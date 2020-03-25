@@ -1,0 +1,5 @@
+"0","library(googlesheets4)"
+"0","`出席狀況表單網址` <-  # 缺乏定義值"
+"0","ss <- as_sheets_id(`出席狀況表單網址`)"
+"2","Error in as_sheets_id(出席狀況表單網址) : 找不到物件 '出席狀況表單網址'
+"

@@ -24,7 +24,11 @@ library(googlesheets4)
 ```
 
 ```{r}
- my_108_total_credits <- 15
+```
+
+
+```{r}
+my_108_total_credits <- 15
  _108_total_credits <- 15
  108_total_credits <- 15
  my_108_total_credits <- 15
