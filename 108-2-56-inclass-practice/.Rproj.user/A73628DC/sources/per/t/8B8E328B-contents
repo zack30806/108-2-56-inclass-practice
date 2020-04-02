@@ -1,0 +1,123 @@
+---
+title: '20200401'
+author: "Zack Lin"
+date: "2020/4/2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+vectorExample <- c(1,2,3)
+listExample <- list(1,2,3)
+
+print(vectorExample)
+print(listExample)
+```
+
+```{r}
+#用list儲存
+library(lubridate)
+`小明交易1` <- list(
+  ymd_hms("2020-03-31T13:40:55Z"), # Date/Time class
+  "一芳", # character
+  2, # numeric
+  "水果茶" # character
+)
+print(`小明交易1`)
+```
+
+```{r} 
+#用vector儲存
+c("2020-03-31T13:40:55Z",
+  "一芳",
+  "2",
+  "水果茶"
+    )
+```
+```{r} 
+#用vector儲存
+list("2020-03-31T13:40:55Z",
+  '一芳',
+  2,
+  "水果茶"
+    )
+```
+物件值可以是vector形式，也可以list
+```{r}
+# list含兩個vectors
+`小明108學年課表A` <- list(
+  c("108-1","高級會計學","高等統計學"),
+  c("108-2","食在拉丁美洲")
+)
+print(`小明108學年課表A`)
+
+# list含兩個lists
+`小明108學年課表B` <- list(
+  list("108-1","高級會計學","高等統計學"),
+  list("108-2","食在拉丁美洲")
+)
+print(`小明108學年課表B`)
+
+# list含兩個lists, 子層list又各含兩個vectors
+`小明108學年課表C` <- list(
+  list(
+    c("108-1"), # 可只寫 "108-1"
+    c("高級會計學","高等統計學")
+       ),
+  list(
+    c("108-2"),
+    c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表C`)
+```
+```{r}
+# list含兩個lists, 子層list又各含兩個vectors
+`小明108學年課表D` <- list(
+  `上學期`=list(
+    semester=c("108-1"), 
+    c("高級會計學","高等統計學")
+       ),
+  list(
+    semester=c("108-2"),
+    course=c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表D`)
+```
+```
+##GITHUB COMMIT
+```{r}
+commit <-list(
+  author =c() ,
+  committer = ,
+  message =
+
+)
+```
+
+
+
+## R Markdown
+
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
