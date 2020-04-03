@@ -184,6 +184,19 @@ commit <- list(
 print(commit)
 ```
 
+```{r}
+weather<-list(
+  
+  
+  
+  
+  
+  
+  
+)
+```
+
+
 
 
 
