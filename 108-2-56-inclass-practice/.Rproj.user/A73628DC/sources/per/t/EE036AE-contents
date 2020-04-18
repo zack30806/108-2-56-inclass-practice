@@ -152,8 +152,8 @@ list1 <-
       status=c(height=177, weight=80)
     )
   )
-
-str(list1)
+print(list1)
+#str(list1)
 ```
 ```{r}
 # 更改日期
@@ -164,8 +164,8 @@ list1[[2]] <- list(
   name="Mary",
   birthday=ymd("1998-08-24")
 )
-
-str(list1)
+print(list1)
+#str(list1)
 ```
 替Mary依Jack的記錄方式增加身高163，體重45。
 
@@ -176,7 +176,7 @@ list1[[2]]$status<-(
 )
 
 list1[[1]]$status$height<-176
-str(list1)
+print(list1)
 ```
 
 使用[.] <-

@@ -1,0 +1,3 @@
+"0","library(jsonlite)"
+"2","package ¡¥jsonlite¡¦ was built under R version 3.6.3"
+"0","fromJSON(""https://data.ntpc.gov.tw/od/data/api/54DDDC93-589C-4858-9C95-18B2046CC1FC?$format=json"", simplifyDataFrame = F) -> newTaipeiYouBike"

@@ -64,6 +64,8 @@ listExample$`學期` # 特殊命名依然要用反頓點呼叫
 ```{r}
 fromJSON("http://data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-000157-002",
          simplifyDataFrame = F) -> newTaipeiCityVaccine
+
+str(newTaipeiCityVaccine)
 ```
 
 ```{r}
@@ -72,13 +74,13 @@ length(newTaipeiCityVaccine)
 names(newTaipeiCityVaccine)
 ```
 ```{r}
-str(newTaipeiCityVaccine[[1]])
-str(newTaipeiCityVaccine$success)
-str(newTaipeiCityVaccine[["success"]])
+#str(newTaipeiCityVaccine[[1]])
+#str(newTaipeiCityVaccine$success)
+#str(newTaipeiCityVaccine[["success"]])
 
-str(newTaipeiCityVaccine[[2]],max.level = 1)
-str(newTaipeiCityVaccine$result,max.level = 1)
-str(newTaipeiCityVaccine[["success"]])
+str(newTaipeiCityVaccine[[2]]#,max.level = 1)
+#str(newTaipeiCityVaccine$result,max.level = 1)
+#str(newTaipeiCityVaccine[["success"]])
 
 ```
 4.1.2.1 用位置選[c(...)]
