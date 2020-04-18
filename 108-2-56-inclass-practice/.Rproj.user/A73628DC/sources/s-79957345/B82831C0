@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586595551228.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B82831C0",
+    "lastKnownWriteTime" : 1586872269,
+    "last_content_update" : 1586872294225,
+    "path" : "C:/Users/zack3/Downloads/homework1 (2).Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "284,3",
+        "last_setup_crc32" : "",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

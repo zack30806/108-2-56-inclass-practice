@@ -1,0 +1,3 @@
+"0","majors10_factor <- factor(majors10_char)"
+"2","Error in factor(majors10_char) : 找不到物件 'majors10_char'
+"

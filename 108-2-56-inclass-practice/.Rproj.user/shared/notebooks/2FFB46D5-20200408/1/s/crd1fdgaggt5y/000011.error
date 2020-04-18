@@ -1,1 +1,0 @@
-{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"str(taipeiNighTMarkets[c(T, F, F, F, T, F, F, F, F, T, F, F, \n    F, T)], max.level = 1)","line_number":0}],"message":"Error in str(taipeiNighTMarkets[c(T, F, F, F, T, F, F, F, F, T, F, F,  : \n  找不到物件 'taipeiNighTMarkets'\n"}

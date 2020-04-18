@@ -1,0 +1,4 @@
+"0","get1 <- listExample[[""學期""]]#拿出來"
+"0","get1 <- listExample$`學期`#拿出來"
+"0",""
+"0","get2 <- listExample[""學期""]#只留下"

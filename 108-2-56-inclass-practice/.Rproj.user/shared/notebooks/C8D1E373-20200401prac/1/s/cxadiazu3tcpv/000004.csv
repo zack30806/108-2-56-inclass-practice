@@ -1,0 +1,7 @@
+"0","stringInteger <- c(""1"",""2"",""-11"")"
+"0","class(stringInteger) # 無法進行數值運算"
+"1","[1]"
+"1"," ""character"""
+"1","
+"
+"0","#stringInteger+2"
