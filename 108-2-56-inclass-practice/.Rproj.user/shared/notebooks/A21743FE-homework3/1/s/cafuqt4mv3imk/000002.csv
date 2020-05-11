@@ -1,2 +1,0 @@
-"0","#read_csv(""https://www.dropbox.com/s/xjzg1iuuws7tcha/table.csv?dl=1"") -> table"
-"0","source(""https://www.dropbox.com/s/5oy56om4q0857tt/student10.R?dl=1"",encoding = ""UTF-8"")"

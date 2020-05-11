@@ -1,0 +1,174 @@
+---
+title: '20200429'
+author: "Zack Lin"
+date: "2020/5/2"
+output: html_document
+---
+
+4.3 On numeric class
+加、減、乘、除： +, -, *, /
+
+
+
+```{r}
+a <- c(2, 3, 5)
+b <- c(4,-1, 3)
+```
+
+```{r}
+a+b
+a-b
+a*b
+a/b
+```
+餘數：%%
+次方：** 或 ^
+
+
+```{r}
+a %% b
+# 相當於
+c(2%%4, 3%%(-1), 5%%3)
+
+a ** b
+```
+奇、偶數判斷
+```{r}
+sequenceNums <- c(11, 6, 8, 11, 12, 11, 3, 7, 10, 8)
+print(sequenceNums)
+
+sequenceNums %% 2 # 餘數為1則是奇數，0則是偶數
+```
+
+
+
+
+4.4 Relational Operators
+```{r}
+example <- list(
+  name=c("小明","小花","小新","美美"),
+  height=c(175,166,170,160),
+  weight=c(77,NA,60,43),
+  birthday=lubridate::ymd(c("1998-03-11","1999-12-22","1995-08-22","2001-10-10")),
+  hobby=c("美食 旅遊","旅遊 時尚","3C 美食","音樂 旅遊"),
+  residence=c("Taipei","New Taipei","Taichung","Kaohsiung"),
+  allowance=factor(c("0-1000","1001-2000","2000+","1001-2000")),
+  bloodType=c("A","B","B","O")
+)
+```
+4.4.1 比較
+>,<,<=,>=: 分別為大於、小於、小於等於、大於等於
+
+數字比較
+
+時間比較
+
+可排序類別資料比較
+
+數字比較
+example裡誰的身高大於等於170
+```{r}
+example$name[c(T, F, T, F)]
+
+str(example[c("name","height")])
+
+pick_above170 <- example$height >= 170
+example$height
+c(175, 166, 170, 160) >= 170
+
+example$name[pick_above170]
+```
+不同屆入學學生在2年級的學業表現
+```{r}
+source("https://www.dropbox.com/s/qsrw069n94k61lj/transcript100to103_list.R?dl=1")
+```
+
+```{r}
+str(transcript100to103)
+```
+
+```{r}
+# 各學屆2年級人數
+table(transcript100to103$學屆)
+# 各學屆2年級成績大於85年數
+table(transcript100to103$學屆[pick_above85])
+```
+選成績大於85分
+```{r}
+# 只要成績大於85的
+pick_above85 <-
+  transcript100to103$`成績` > 85
+```
+```{r}
+# 各學屆2年級人數
+table(transcript100to103$學屆)
+# 各學屆2年級成績大於85人數
+table(transcript100to103$學屆[pick_above85])
+```
+時間比較:
+example裡誰1998年(含)以後出生
+```{r}
+example$birthday
+class(example$birthday)
+typeof(example$birthday)
+
+print(example[c("name","birthday")])
+
+pick_after98 <- example$birthday >= lubridate::ymd("1998-01-01")
+example$name[pick_after98]
+```
+美元匯率
+```{r}
+source("https://www.dropbox.com/s/16h6ggua6qtydci/exchangeRate.R?dl=1")
+
+str(exchangeRate)
+
+exchangeRate_after98 <-
+  list(
+    `期間`=exchangeRate$`期間`[pick_after98_01],
+    `幣別`=exchangeRate$`幣別`[pick_after98_01],
+    `匯率`=exchangeRate$`匯率`[pick_after98_01]
+    
+  )
+```
+4.4.2 相等，屬於
+==: 等於
+
+!=: 不等於
+
+==與!=可使用於字串
+```{r}
+print(example[c("name","bloodType")])
+
+pick_bloodB <- example$bloodType == "B"
+example$name[pick_bloodB]
+```
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
