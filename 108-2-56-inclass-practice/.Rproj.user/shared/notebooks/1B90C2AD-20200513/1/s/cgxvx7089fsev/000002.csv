@@ -1,0 +1,6 @@
+"0","Sys.getlocale(""LC_COLLATE"")"
+"1","[1]"
+"1"," ""Chinese (Traditional)_Taiwan.950"""
+"1","
+"
+"0","jsonlite::fromJSON(""https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.json"") -> covid19"

@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588421877106.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5964AFE8",
+    "lastKnownWriteTime" : 1588699271,
+    "last_content_update" : 1589711337528,
+    "path" : "D:/R/新增資料夾/20200429.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "143,25",
+        "last_setup_crc32" : "",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

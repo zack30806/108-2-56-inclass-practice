@@ -1,0 +1,3 @@
+"0","# 要numerical class排的才一定對"
+"0","startingAges <- as.integer(startingAges)"
+"0","names(startingAges) <- level_names"

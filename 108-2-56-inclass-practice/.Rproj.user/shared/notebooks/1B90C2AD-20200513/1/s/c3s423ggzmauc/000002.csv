@@ -1,0 +1,5 @@
+"0","level_names <- levels(covid19$`年齡層`)"
+"0","startingAges <- stringr::str_extract("
+"0","  level_names,"
+"0","  ""^[0-9]+"" # regex：開頭的一串數字"
+"0",")"

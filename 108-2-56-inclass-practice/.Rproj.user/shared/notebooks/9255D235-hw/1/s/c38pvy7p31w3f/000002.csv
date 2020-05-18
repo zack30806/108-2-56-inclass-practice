@@ -1,0 +1,18 @@
+"0","factor(studentHeights)"
+"1","factor"
+"1",""
+"1","(0)
+"
+"1",""
+"1","Levels: "
+"1",""
+"1",""
+"1",""
+"1","
+"
+"0","sort(studentHeights$`學年度`)"
+"1","NULL
+"
+"0","#semesterranking<- (`學年度`)"
+"0",""
+"0","# studentHeight"
