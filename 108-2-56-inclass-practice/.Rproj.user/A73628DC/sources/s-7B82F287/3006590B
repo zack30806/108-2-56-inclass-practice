@@ -1,19 +1,19 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1589772122105.000,
+    "created" : 1589886101902.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "67FBAFBE",
-    "lastKnownWriteTime" : 1589772305,
-    "last_content_update" : 1589772306368,
-    "path" : "D:/R/hw.2",
+    "id" : "3006590B",
+    "lastKnownWriteTime" : 1590054090,
+    "last_content_update" : 1590054090353,
+    "path" : "C:/Users/zack3/OneDrive/桌面/hw5-2.Rmd",
     "project_path" : null,
     "properties" : {
-        "cursorPosition" : "20,4",
-        "last_setup_crc32" : "FECC794bb338d19",
+        "cursorPosition" : "164,23",
+        "last_setup_crc32" : "",
         "scrollLine" : "0",
         "tempName" : "Untitled1"
     },
@@ -23,5 +23,5 @@
     "relative_order" : 5,
     "source_on_save" : false,
     "source_window" : "",
-    "type" : "text"
+    "type" : "r_markdown"
 }

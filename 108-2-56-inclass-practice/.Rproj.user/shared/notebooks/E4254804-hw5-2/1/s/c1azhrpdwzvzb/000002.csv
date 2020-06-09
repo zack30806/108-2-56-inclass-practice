@@ -1,0 +1,7 @@
+"0",""
+"0","realEstateRegex <- stringr::str_extract("
+"0","  level_names,"
+"0","  ""不動系"""
+"0",")"
+"0","# realEstateRegex"
+"0",""

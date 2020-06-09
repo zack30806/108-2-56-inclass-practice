@@ -2,8 +2,8 @@
 title: "homework 5"
 output: html_document
 params:
-  studentName: "你的名字"
-  studentID: "你的學號"
+  studentName: "林俊佑"
+  studentID: "410776019"
 editor_options: 
   chunk_output_type: console
 ---
@@ -41,8 +41,19 @@ print(studentHeights)
 請將「學年度」及「年齡」都改成ordered factor, levels順序以其文字數值從小排到大。( 答案物件studentHeights本身)
 
 ```{r ans11}
-factor(studentHeights)
-`學年度`<-levels(studentHeights$`學年度`)
+studentHeights$`學年度` <-
+  factor(
+    studentHeights$`學年度`,
+    ordered=TRUE
+  )
+studentHeights$`學年度`
+studentHeights$`年齡` <-
+  factor(
+    studentHeights$`年齡`,
+    ordered=TRUE
+  )
+levels(studentHeights$`年齡`)
+studentHeights$`年齡`
 #semesterranking<- sort(`學年度`)
 
 # studentHeight
@@ -51,7 +62,8 @@ factor(studentHeights)
 ### 1.2 年齡層
 請在studentHeights新增「年齡層」元素（class ordered factor），其類別排序為6-8 < 9-12 < 13-15三類年齡層。
 ```{r ans12}
-studentHeights$`年齡層`
+studentHeights$`年齡層` <- factor(studentHeights$`年齡層`, c("6-8","9-12","13-15"))
+levels(studentHeights$`年齡層`)
 # studentHeights$`年齡層`
 ```
 
@@ -59,6 +71,12 @@ studentHeights$`年齡層`
 請創造一個named numeric vector, averageHeightByGroup (class numeric, length=3) 其值分別是三組年齡層各自所包含年齡下不分性別身高的平均（即第一個值是所有6-8歲不分學年度、不分性別身高（總計身高）的平均，再來是9-12歲，最後是13-15歲），而此vector的元素名稱也分別是"6-8", "9-12", "13-15" (hint: 數值向量x元素平均, 可用mean(x)求得； 這題也考驗同學組合數個「要不要」向量`pick_XXX`)
 
 ```{r ans13}
+pick6_8<-studentHeights$`年齡層`=="6-8"
+mean(studentHeights$`平均身高`[pick6_8])
+pick9_12<-studentHeights$`年齡層`=="9-12"
+mean(studentHeights$`平均身高`[pick9_12])
+pick13_15<-studentHeights$`年齡層`=="13-15"
+mean(studentHeights$`平均身高`[pick13_15])
 # averageHeightByGroup
 ```
 
@@ -66,6 +84,19 @@ studentHeights$`年齡層`
 請創造一個named numeric vector, genderDifferenceByAge (class numeric, length=3) 其值分別是三組年齡層各自所包含年齡下的「男性平均」減去「女性平均」（即第一個值是所有6-8歲不分學年度的男女平均差異，再來是9-12歲，最後是13-15歲），而此vector的元素名稱也分別是"6-8", "9-12", "13-15" (hint: 數值向量x元素平均, 可用mean(x)求得)
 
 ```{r ans14}
+boys<-studentHeights$`類別`=="男"
+girls<-studentHeights$`類別`=="女"
+mean(studentHeights$`平均身高`[pick6_8&boys])->boysA
+mean(studentHeights$`平均身高`[pick6_8&girls])->girlsA
+
+mean(studentHeights$`平均身高`[pick9_12&boys])->boysB
+mean(studentHeights$`平均身高`[pick9_12&girls])->girlsB
+
+mean(studentHeights$`平均身高`[pick13_15&boys])->boysC
+mean(studentHeights$`平均身高`[pick13_15&girls])->girlsC
+
+heightDifferenceByGroup<-c(boysA-girlsA,boysB-girlsB,boysC-girlsC)
+heightDifferenceByGroup
 # heightDifferenceByGroup
 ```
 
@@ -80,6 +111,7 @@ jsonlite::fromJSON("https://www.dropbox.com/s/bp0w8tjgrhi79x7/sameMajorDifferent
 請寫下「一個」字串的regex字串向量，稱之為realEstateRegex （class character, length=1）,
 
 ```{r ans21}
+realEstateRegex<-str_replace(differentMajors,realEstateRegex,"不動系")
 # realEstateRegex
 ```
 
@@ -93,6 +125,8 @@ str_replace(differentMajors,realEstateRegex,"不動系")
 ### 2.2 factor levels
 直接將differentMajors轉成factor, 並將它的levels存在currentLevels（class character）。（雖然同系有不同叫法而形成好幾個levels，這題不用去整併它。）
 ```{r ans22}
+factor(differentMajors)
+currentLevels<-levels(differentMajors)
 # currentLevels
 ```
 
@@ -101,6 +135,7 @@ str_replace(differentMajors,realEstateRegex,"不動系")
 請寫下「一個」字串的regex（class character, length=1）稱之為bSchoolRegex,
 
 ```{r ans23}
+bSchoolRegex<-"休閒與運動管理學系|休運系|金融與合作經營學系|金融系|金融與合作學系"
 # bSchoolRegex
 ```
 
@@ -117,6 +152,22 @@ str_replace(currentLevels,bSchoolRegex,"商學院")
   
 這題不限方法或regex使用次數。（答案物件differentMajors本身, class factor）
 ```{r ans24}
+real_estate<-"不動系|不動產城鄉系|不動產與城鄉環境學系"
+public<-"公行系|公共行政暨政策學系|公共行政系"
+socialworking<-"社工系|社會工作系"
+society<-"社會系|社會學系"
+economics<-"經濟系|經濟學系"
+finance<-"金融與合作經營學系|金融系|金融與合作學系"
+leisure<-"休閒與運動管理學系|休運系"
+
+differentMajors<-str_replace(differentMajors,real_estate,"不動系")
+differentMajors<-str_replace(differentMajors,public,"公行系")
+differentMajors<-str_replace(differentMajors,socialworking,"社工系")
+differentMajors<-str_replace(differentMajors,society,"社會系")
+differentMajors<-str_replace(differentMajors,economics,"經濟系")
+differentMajors<-str_replace(differentMajors,finance,"金融系")
+differentMajors<-str_replace(differentMajors,leisure,"休運系")
+levels(differentMajors)
 # differentMajors
 ```
 

@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1590412511646.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "115662F9",
+    "lastKnownWriteTime" : 1590311062,
+    "last_content_update" : 1590311062,
+    "path" : "C:/Users/zack3/Downloads/homework4-ans-public.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "34,28",
+        "scrollLine" : "25"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

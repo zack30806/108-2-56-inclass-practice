@@ -1,25 +1,26 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1589649967669.000,
+    "created" : 1588844755081.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "67FED056",
-    "lastKnownWriteTime" : 1589772309,
-    "last_content_update" : 1589772309304,
-    "path" : "C:/Users/zack3/Downloads/homework5.Rmd",
+    "id" : "2B4CD5A",
+    "lastKnownWriteTime" : 1589772043,
+    "last_content_update" : 1589772043310,
+    "path" : "D:/R/20200506.Rmd",
     "project_path" : null,
     "properties" : {
-        "chunk_output_type" : "console",
-        "cursorPosition" : "121,0",
-        "scrollLine" : "0"
+        "cursorPosition" : "27,13",
+        "last_setup_crc32" : "",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 4,
+    "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"
